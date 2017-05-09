@@ -27,6 +27,7 @@ namespace TheWorld.Controllers.Api
             _coordsService = coordsService;
         }
 
+        [HttpGet]
         public IActionResult Get(string tripName)
         {
             try
