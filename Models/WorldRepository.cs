@@ -39,6 +39,14 @@ namespace TheWorld.Models
 
             return _context.Trips.ToList();
         }
+        
+        public IEnumerable<Trip> GetTripsByUsername(string name)
+        {
+            return _context.Trips
+                .Where(t => t.UserName == name)
+                .OrderBy(t => t.Name)
+                .ToList();
+        }
 
         public Trip GetTripByName(string tripName)
         {
@@ -59,11 +67,6 @@ namespace TheWorld.Models
         public async Task<bool> SaveChangesAsync()
         {
             return (await _context.SaveChangesAsync()) > 0;
-        }
-
-        public IEnumerable<Trip> GetTripsByUsername(string name)
-        {
-            return _context.Trips.Where(t => t.UserName == name).ToList();
         }
 
     }
