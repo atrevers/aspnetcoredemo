@@ -1,0 +1,1 @@
+!function(a){var e=a("#sidebar,#wrapper"),s=a("#sidebarToggle i.fa");a("#sidebarToggle").on("click",function(){e.toggleClass("hide-sidebar"),e.hasClass("hide-sidebar")?(s.removeClass("fa-angle-left"),s.addClass("fa-angle-right")):(s.removeClass("fa-angle-right"),s.addClass("fa-angle-left"))})}(jQuery);
